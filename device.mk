@@ -305,6 +305,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
+    KarnaPowerProfile \
     KarnaSettingsProviderOverlay \
     SuryaSettingsProviderOverlay \
     NoCutoutOverlay \
