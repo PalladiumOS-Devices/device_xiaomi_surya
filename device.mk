@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 
+# Settings
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Device Settings
 $(call inherit-product-if-exists, vendor/PocoParts/pocoparts.mk)
 
