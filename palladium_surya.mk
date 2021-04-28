@@ -6,13 +6,21 @@
 
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common DotOS stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit some common PalladiumOS stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
-DOT_OFFICIAL := true
+# PALLADIUM-PROPS
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=CHRISL7 \
+    ro.palladiumdevice.cpu=SDM732G \
+    ro.palladiumdevice.display=6.67 \
+    ro.palladiumdevice.displaytype=FULLHD+
+
+# OFFICIAL
+PALLADIUM_BUILDTYPE := OFFICIAL
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := dot_surya
+PRODUCT_NAME := palladium_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3

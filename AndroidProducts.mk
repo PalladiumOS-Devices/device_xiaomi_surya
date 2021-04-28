@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_surya.mk
+    $(LOCAL_DIR)/palladium_surya.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_surya-user \
-    dot_surya-userdebug \
-    dot_surya-eng
+    palladium_surya-user \
+    palladium_surya-userdebug \
+    palladium_surya-eng
