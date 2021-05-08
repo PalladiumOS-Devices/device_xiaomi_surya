@@ -14,7 +14,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.palladiumdevice.maintainer=CHRISL7 \
     ro.palladiumdevice.cpu=SDM732G \
     ro.palladiumdevice.display=6.67 \
-    ro.palladiumdevice.displaytype=FULLHD+
+    ro.palladiumdevice.displaytype=FULLHD+ \
+    ro.palladiumdevice.camera=64+13+2+2MP
 
 # OFFICIAL
 PALLADIUM_BUILDTYPE := OFFICIAL
