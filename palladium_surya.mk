@@ -9,6 +9,8 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 # Inherit some common PalladiumOS stuff.
 $(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
+WITH_OPAPPS := true
+
 # PALLADIUM-PROPS
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.palladiumdevice.maintainer=CHRISL7 \
