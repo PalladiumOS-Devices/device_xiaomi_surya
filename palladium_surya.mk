@@ -18,14 +18,33 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit from common DotOS configuration
-$(call inherit-product, vendor/dot/config/common.mk)
+# Inherit some common PalladiumOS stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
+
+# OFFICIAL
+PALLADIUM_BUILD_TYPE := OFFICIAL
+
+WITH_OPAPPS := true
+
+# PALLADIUM-PROPS For About Phone
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=CHRISL7 \
+    ro.palladiumdevice.cpu=SDM732G \
+    ro.palladiumdevice.display=6.67 \
+    ro.palladiumdevice.displaytype=FULLHD+ \
+    ro.palladiumdevice.camera=64+13+2+2MP \
+    ro.palladiumdevice.battery=5160mAh
+
+ifeq ($(ro.product.device), karna)
+    PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.battery=6000mAh
+endif
 
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Device identifier
-PRODUCT_NAME := dot_surya
+PRODUCT_NAME := palladium_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := POCO X3
