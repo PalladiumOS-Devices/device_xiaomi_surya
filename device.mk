@@ -305,6 +305,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     KarnaFrameworks \
+    KarnaSettingsProviderOverlay \
+    SuryaSettingsProviderOverlay \
     NoCutoutOverlay \
     NotchBarKiller
 
